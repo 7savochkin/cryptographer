@@ -6,7 +6,7 @@ from cryptographer_lib import ClientCryptographer
 
 def test_caezar_cryptographer():
     clean_text = 'Я, Савочкін Олег Олександрович, студент університету'
-    key = 5
+    key = 3
 
     client = ClientCryptographer(
         crypto_instance=CaezarCryptographer(key)
@@ -23,7 +23,7 @@ def test_caezar_cryptographer():
 
 def test_linear_cryptographer():
     clean_text = 'Я, Савочкін Олег Олександрович, студент університету'
-    key = 5
+    key = 2
 
     client = ClientCryptographer(
         crypto_instance=LinearCryptographer(key)
@@ -40,7 +40,7 @@ def test_linear_cryptographer():
 
 def test_affine_cryptographer():
     clean_text = 'Я, Савочкін Олег Олександрович, студент університету'
-    key = (5, 7)
+    key = [2, 5]
 
     client = ClientCryptographer(
         crypto_instance=AffineCryptographer(key)

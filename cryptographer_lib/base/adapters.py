@@ -15,5 +15,9 @@ class SimpleAlphabetAdapter:
         """
         return self._alphabet
 
+    @property
+    def alphabet_length(self):
+        return len(self.alphabet)
+
     def get_alphabet_char(self, index):
         return self.alphabet[index]

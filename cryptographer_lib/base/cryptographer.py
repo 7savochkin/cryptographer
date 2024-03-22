@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Iterable, Union
+from typing import Union, List
 
 from base.adapters import SimpleAlphabetAdapter
 from helpers import compare_chars_case
@@ -27,7 +27,7 @@ class BaseCryptographer(ABC):
 class BaseSubstitutionCryptographer(BaseCryptographer, SimpleAlphabetAdapter):
     """Base class for substitution cryptographers"""
 
-    def __init__(self, key: Union[int, Iterable[int]]):
+    def __init__(self, key: Union[int, List[int]]):
         super(BaseSubstitutionCryptographer, self).__init__()
         self.key = key
 
